@@ -104,5 +104,8 @@ f.add(resetButton, gbc);
 
 gbc.gridy++;
 f.add(themeButton, gbc);
+button.setToolTipText("Click to encrypt/decrypt image");
+resetButton.setToolTipText("Clear the key field");
+themeButton.setToolTipText("Toggle between dark and light mode");
 
 }
