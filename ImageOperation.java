@@ -63,6 +63,7 @@ public class ImageOperation {
             int key = Integer.parseInt(text);
             operate(key);
         });
+        textField.setDragEnabled(true);
 
         decryptButton.addActionListener(e -> {
             String text = textField.getText();
