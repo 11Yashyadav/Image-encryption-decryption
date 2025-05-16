@@ -74,6 +74,15 @@ public class ImageOperation {
             int key = Integer.parseInt(text);
             operate(key);
         });
+        JButton themeButton = new JButton("Toggle Theme");
+        themeButton.setFont(font);
+
+        themeButton.addActionListener(e -> {
+            boolean isDark = f.getBackground().equals(java.awt.Color.DARK_GRAY);
+            f.getContentPane().setBackground(isDark ? java.awt.Color.WHITE : java.awt.Color.DARK_GRAY);
+        });
+
+        f.add(themeButton);
 
         resetButton.addActionListener(e -> textField.setText(""));
         fileChooser.setAcceptAllFileFilterUsed(false);
