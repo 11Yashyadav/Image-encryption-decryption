@@ -90,4 +90,19 @@ public class ImageOperation {
                 new javax.swing.filechooser.FileNameExtensionFilter("Images", "jpg", "jpeg", "png", "bmp"));
 
     }
+    f.setLayout(new java.awt.GridBagLayout());
+java.awt.GridBagConstraints gbc = new java.awt.GridBagConstraints();
+gbc.gridx = 0;
+gbc.gridy = 0;
+f.add(button, gbc);
+
+gbc.gridy++;
+f.add(textField, gbc);
+
+gbc.gridy++;
+f.add(resetButton, gbc);
+
+gbc.gridy++;
+f.add(themeButton, gbc);
+
 }
