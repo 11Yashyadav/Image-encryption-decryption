@@ -15,4 +15,15 @@ encryptButton.addActionListener(e -> {
     int key = Integer.parseInt(text);
     operate(key); // XOR encryption
 });
+
+decryptButton.addActionListener(e -> {
+    String text = textField.getText();
+    if (text.isEmpty()) {
+        JOptionPane.showMessageDialog(f, "Enter a key.");
+        return;
+    }
+    int key = Integer.parseInt(text);
+    operate(key); // XOR decryption (same function)
+});
+
 }
