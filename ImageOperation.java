@@ -54,6 +54,16 @@ public class ImageOperation {
         decryptButton.setToolTipText("Decrypt the image with XOR key");
         resetButton.setToolTipText("Clear the input field");
 
+        encryptButton.addActionListener(e -> {
+            String text = textField.getText();
+            if (!text.matches("\\d+")) {
+                JOptionPane.showMessageDialog(f, "Enter a valid numeric key");
+                return;
+            }
+            int key = Integer.parseInt(text);
+            operate(key);
+        });
+
         decryptButton.addActionListener(e -> {
             String text = textField.getText();
             if (!text.matches("\\d+")) {
@@ -63,6 +73,8 @@ public class ImageOperation {
             int key = Integer.parseInt(text);
             operate(key);
         });
+
+        resetButton.addActionListener(e -> textField.setText(""));
 
     }
 }
