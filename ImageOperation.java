@@ -75,6 +75,9 @@ public class ImageOperation {
         });
 
         resetButton.addActionListener(e -> textField.setText(""));
+        fileChooser.setAcceptAllFileFilterUsed(false);
+        fileChooser.addChoosableFileFilter(
+                new javax.swing.filechooser.FileNameExtensionFilter("Images", "jpg", "jpeg", "png", "bmp"));
 
     }
 }
